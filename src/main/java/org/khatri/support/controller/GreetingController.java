@@ -1,4 +1,4 @@
-package org.khatri.support;
+package org.khatri.support.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,5 +16,10 @@ public class GreetingController {
     public String hello(){
         LOGGER.debug("Pinged Hi Method");
         return "Hi";
+    }
+
+    @GetMapping("/exception")
+    public String exception(){
+        throw new UnsupportedOperationException();
     }
 }
